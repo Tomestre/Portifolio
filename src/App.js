@@ -1,6 +1,9 @@
 import './App.css';
 import cerebro from './assets/cerebro.png'
 
+
+
+
 function App() {
   
   const itensProjeto = [
@@ -20,10 +23,13 @@ function App() {
         detalhes:'descrição do projeto',
         }
   ]
+  const coder = '<Coder>'
   
   return (
+    
 
     <header className='app'>
+      
       <nav className='menu'>
         <h2 className='assinatura'>Gabriel Tomé</h2>
       
@@ -41,16 +47,16 @@ function App() {
       <div className='animation1'>
         <img src={cerebro} className='cerebro'/>
         <div className='buttons'>
-        <button className='coder'>Coder</button>
+        <button className='coder'>{coder}</button>
          <button className='designer'>Designer</button>
         </div>
       </div>
       </div>
 
-      <div>
+      <div className='sessao2'>
         <h1>Projetos</h1>
-        <div>
-          <h3>{itensProjeto.map(projeto => projeto.titulo)}</h3>
+        <div className='projetos'>
+          {itensProjeto.map(projeto => <h3>{projeto.titulo}</h3>)}
         </div>
 
       </div>
