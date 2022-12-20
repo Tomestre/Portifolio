@@ -9,26 +9,37 @@
   padding: 0;
   border: 0;
   font-family: 'Roboto';
+  width: 100%;
   
 }
 
 .menu{
 
   background-color:rgba(3, 1, 65, 1);
-  background-repeat: repeat-y;
-  background-size: cover;
-  display: inline-flex;
   
+ 
   width: 100%;
-  height: 100%;
+  height: 56px;
+  position: fixed;
+  text-align: center;
+  z-index: 2;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
 
 }
-ul,li,h1,h2,h3,p,div{
+ul,li,h1,h2,h3,p,div,a{
   margin: 0;
   border: 0;
   opacity: 1;
   color: rgb(255, 255, 255);
 }
+
+button{
+  font-family: 'Roboto';
+}
+
+
 
 h1{
   color:#00c55f;
@@ -38,19 +49,33 @@ h1{
 
  }
 .assinatura{
+  vertical-align:baseline;
+  color: rosybrown;
+  text-align: center;
+  float:left;
+  align-self: center;
+  
 
 }
+ul{
+  justify-content: right;
 
+}
 .smoothScroll{
   display: inline-flex;
   flex-direction: row;
   list-style-type: none;
+  align-self: center;
+  gap: 10px;
 }
 
+.active{
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
 .sessao1{
   background-image: url('./assets/image\ 16.png');
   background-color:rgba(20, 6, 115, 1);
-  
+  margin-top:55px ;
   
 
 }
@@ -84,6 +109,7 @@ h1{
 }
 
 button{
+  cursor: pointer;
   display: block;
   height: 33px;
   left: 40px;
@@ -92,27 +118,115 @@ button{
 
   background: rgba(3, 1, 64, 0.3);
   box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(2px);
+  
   border-radius: 4px;
   border: 0cm;
-  color: aliceblue;
+  color: rgb(255, 255, 255);
+}
+
+button p{
+  backdrop-filter:none;
 }
 
 .designer{
+  font-size: 20px;
+  font-weight: bold;
+
  
+}
+.coder{
+  font-size: 20px;
+  font-weight: lighter;
+  
+
 }
 
 .sessao2{
   background-image: url('./assets/image\ 16.png');
   background-color:rgba(3, 1, 64, 1);
-  display: grid;
+  
+  justify-content: center;
+  
+
 
 }
 
-.projetos{
-  column-count: auto;
-  display: flex;
+.containerProjetos{
+  max-width: 600px;
+  margin: auto;
+
+  display: grid;
   align-content: center;
   justify-content: center;
+  align-items: center;
+  justify-items: center;
   gap: 10px;
+  grid-auto-flow: row;
+  
+ grid-auto-rows: 300px;
+ grid-template-columns: repeat(auto-fill, minmax(50px, 170px));;
+}
+
+
+
+
+.projeto{
+  width: 150px;
+
+  background: rgba(3, 1, 64, 0.3);
+  backdrop-filter: blur(2px);
+  border-radius: 4px;
+  border: 0cm;
+  color: rgb(255, 255, 255);
+
+
+}
+
+.containerProjetos div:nth-child(even){
+  background: rgba(28, 15, 116, 0.3);
+}
+
+.imgProjeto{
+  width: 100%;
+  height: 200px;
+
+  margin-top: 5px;
+  object-fit: cover;
+  
+
+}
+
+.sessao3{
+  background-image: url('./assets/image\ 16.png');
+  background-color:rgba(20, 6, 115, 1);
+  align-items: center;
+
+}
+
+.sessao3 p{
+  width: 75%;
+  margin:0 auto;
+  text-align: start;
+  max-width: 500px;
+}
+
+.sessao4{
+  background-image: url('./assets/image\ 16.png');
+  background-color:rgba(3, 1, 64, 1);
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+.whatsApp{
+  margin-top: 10px;
+  cursor: pointer;
+  width: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #00c55f;
+  border-radius: 4px;
+  
 }
